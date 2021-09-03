@@ -15,4 +15,6 @@ public interface UserService {
     List<UserDto> findAllUser();
 
     UserDto saveUser(User user);
+
+    UserDto findUserById(int id_user);
 }

@@ -40,4 +40,10 @@ public class UserServiceImpl implements UserService{
         User tmp = userRepository.save(user);
         return UserMapper.UserToDto(tmp);
     }
+
+    @Override
+    public UserDto findUserById(int id) {
+        User tmp = userRepository.findById(id).get();
+        return UserMapper.UserToDto(tmp);
+    }
 }
